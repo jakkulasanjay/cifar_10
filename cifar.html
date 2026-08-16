@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            background-color:pink;
+            text-align: center;
+            text-decoration: solid;
+        }
+
+  
+        .cm{
+        padding:120px;
+        background-color: rgb(9, 145, 11);
+      }
+    </style>
+    <title>CIFAR-10 Image Classification</title>
+</head>
+
+<body>
+
+    <h1>CIFAR-10 Image Classifier</h1>
+<div>
+    <form class="cm" method="POST" enctype="multipart/form-data">
+
+        <input type="file" name="image" accept="image/*" required><br><br>
+
+        <button type="submit">Predict</button>
+
+    </form>
+    </div>
+
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+
+</body>
+</html>
